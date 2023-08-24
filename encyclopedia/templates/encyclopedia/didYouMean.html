@@ -1,0 +1,19 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    Did you mean?
+{% endblock %}
+
+{% block body %}
+    <h6>Did you mean.....?</h6>
+   
+    <hr>
+    <ul>
+        {% for name in list %}
+        <li>
+            <a href="{% url 'content' name %}">{{ name}}</a>
+        </li>
+        {% endfor %}
+    </ul>
+{% endblock %}
+    
